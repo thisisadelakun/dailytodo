@@ -1,0 +1,259 @@
+.todo_col {
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+    font-family: 'Josefin Sans', sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.create_new {
+    position: relative;
+    display: flex;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.create_new:focus {
+    border: red;
+}
+
+.create_new button {
+    outline: none;
+    background: none;
+    border-radius: 10%;
+    position: absolute;
+    align-self: center;
+    margin: auto 15px;
+}
+
+body.light-mode .create_new button {
+    color: var( --VeryDarkGrayishBlue3);
+    border: 1px solid var(--LightGrayishBlue2);
+}
+
+body.dark-mode .create_new button {
+    color: var(--LightGrayishBlue2);
+    border: 1px solid var(--DarkGrayishBlue2);
+}
+
+.create_new input {
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    font-size: 15px;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 15px 15px 15px 45px;
+    border: none;
+    background-color: transparent;
+    caret-color: var(--BrightBlue);
+    transition: 0.5s ease;
+}
+
+body.light-mode .create_new input {
+    color: var(--VeryDarkGrayishBlue1) !important;
+}
+
+body.dark-mode .create_new input {
+    color: var(--LightGrayishBlue2) !important;
+}
+
+.create_new input:focus {
+    appearance: none;
+    outline: none;
+}
+
+.create_new input::placeholder {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+}
+
+body.light-mode .create_new input::placeholder {
+    color: var(--DarkGrayishBlue1) !important;
+}
+
+body.dark-mode .create_new input::placeholder {
+    color: var(--DarkGrayishBlue2) !important;
+}
+
+.todo_list_footer,
+.list_conts {
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center !important;
+    justify-content: space-between;
+
+}
+
+.todo_list_footer {
+    padding: 5px 20px;
+}
+
+.list_conts {
+    position: relative;
+    padding: 10px 15px;
+}
+
+.cancel_btn {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    margin: auto;
+    visibility: hidden;
+    transition: visibility 0.2s;
+}
+
+.list_conts:hover .cancel_btn {
+    visibility: visible;
+    /* Show on hover */
+}
+
+.todo_list_card {
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.filtered_col {
+    height: 40px;
+    margin: auto;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+body.light-mode .f2_col,
+body.light-mode .create_new,
+body.light-mode .todo_list_card,
+body.light-mode .list_conts {
+    background-color: var(--VeryLightGray);
+}
+
+body.dark-mode .f2_col,
+body.dark-mode .create_new,
+body.dark-mode .todo_list_card,
+body.dark-mode .list_conts {
+    background-color: var(--VeryDarkDesaturatedBlue);
+}
+
+body.light-mode .list_conts {
+    color: var(--VeryDarkGrayishBlue1) !important;
+}
+
+body.dark-mode .list_conts {
+    color: var(--LightGrayishBlueHover);
+}
+
+
+.list_conts label {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.f2_col {
+    width: 100%;
+    margin: 10px;
+    padding: 10px 10px;
+    display: flex;
+    gap: 10px;
+    border-radius: 8px !important;
+    box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+.display_added_list_row ul li {
+    border-bottom: 1px solid var(--VeryDarkGrayishBlue3);
+}
+
+.checkbox_container {
+    width: 100%;
+    margin-top: 2px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.checkbox_container p {
+    width: 100%;
+    text-align: left;
+}
+
+.custom_checkbox {
+    appearance: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+body.light-mode .custom_checkbox {
+    border: 1px solid var(--LightGrayishBlue2) !important;
+}
+
+body.dark-mode .custom_checkbox {
+    border: 1px solid var(--DarkGrayishBlue2) !important;
+}
+
+body.light-mode .custom_checkbox:hover,
+body.dark-mode .custom_checkbox:hover {
+    border: 1px solid var(--BrightBlue) !important;
+}
+
+body.light-mode .completed {
+    text-decoration: line-through !important;
+    color: var(--DarkGrayishBlue1) !important;
+}
+
+body.dark-mode .completed {
+    text-decoration: line-through !important;
+    color: var(--DarkGrayishBlue2) !important;
+}
+
+.selected .custom_checkbox,
+.completed .custom_checkbox {
+    background: url('../../assets/icon-check.svg'), linear-gradient(to right, rgb(87, 221, 255), rgb(192, 88, 243));
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.9s ease;
+}
+
+.active {
+    color: var(--BrightBlue) !important;
+}
+
+
+body.light-mode .completed_btn button,
+body.light-mode .todo_list_footer,
+body.light-mode .filtered_col button {
+    color: var(--VeryDarkGrayishBlue1);
+}
+
+body.dark-mode .completed_btn button,
+body.dark-mode .todo_list_footer,
+body.dark-mode .filtered_col button {
+    color: var(--DarkGrayishBlue2);
+}
+
+body.light-mode .completed_btn button:hover,
+body.light-mode .filtered_col button:hover {
+    color: var(--VeryDarkDesaturatedBlue);
+}
+
+body.dark-mode .completed_btn button:hover,
+body.dark-mode .filtered_col button:hover {
+    color: var(--LightGrayishBlueHover) !important;
+}
+
+@media only screen and (min-width:768px) {
+
+    .create_new input,
+    .create_new input::placeholder {
+        font-size: 18px;
+    }
+}
