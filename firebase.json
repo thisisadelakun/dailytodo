@@ -1,0 +1,24 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/verify-email/**",
+        "destination": "/verify-email.html"
+      },
+      {
+        "source": "/reset-password/**",
+        "destination": "/reset-password.html"
+      },
+      {
+        "source": "/change-email/**",
+        "destination": "/change-email.html"
+      }
+    ]
+  }
+}

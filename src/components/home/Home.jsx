@@ -24,8 +24,8 @@ const Home = () => {
                 <header>
                     <div className="home_col_headers">
                         <div className='home_col_headers_name'>
-                            <small>{infos.name2}</small>
                             <h1>{infos.name}</h1>
+                            <small>{infos.name2}</small>
                         </div>
 
                         <div className='theme_auth'>

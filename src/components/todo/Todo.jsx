@@ -15,6 +15,7 @@ const Todo = () => {
   const [showDoneIcon, setShowDoneIcon] = useState(false);
   const inputRef = useRef(null);
 
+  
   // Function to add a new task
   const addTodo = () => {
     if (newTodo.trim() === '') {
@@ -22,6 +23,7 @@ const Todo = () => {
     }
 
     const newTask = {
+      id: Date.now().toString(), // Generate a unique ID
       text: newTodo,
       completed: false,
     };
@@ -79,7 +81,6 @@ const Todo = () => {
   };
 
 
-
   return (
     <div className="todo_col">
       <div className="add_input">
@@ -101,7 +102,7 @@ const Todo = () => {
             value={newTodo}
             onChange={(e) => setNewTodo(e.target.value)}
             onKeyDown={handleEnterKeyPress}
-            ref={inputRef} // Assign the ref to the input element
+            ref={inputRef}
           />
         </div>
       </div>

@@ -7,13 +7,13 @@ import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBdFIYmY7tIbIcOnKD4Xm6yWl-iC-gDvVg",
-  authDomain: "to-do-app-0000.firebaseapp.com",
-  projectId: "to-do-app-0000",
-  storageBucket: "to-do-app-0000.appspot.com",
-  messagingSenderId: "810097442064",
-  appId: "1:810097442064:web:bfa44f1133eed2035e7995",
-  measurementId: "G-3Q5H1HHZK5"
+  apiKey: "AIzaSyB0ZVGeLFQyNJU33-ViyAw0jzfrkBMPUzk",
+  authDomain: "todotrove-app.firebaseapp.com",
+  projectId: "todotrove-app",
+  storageBucket: "todotrove-app.appspot.com",
+  messagingSenderId: "838340400203",
+  appId: "1:838340400203:web:0fe957774845f4c29629ce",
+  measurementId: "G-K789ZD7PKN"
 };
 
 
